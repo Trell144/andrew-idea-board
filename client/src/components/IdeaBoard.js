@@ -7,6 +7,7 @@ const StyledIdea = styled.div`
   border: 1px solid black;
   width: 30vw;
   min-width: 100px;
+
 `
 
 export default class IdeaBoard extends Component {
@@ -32,6 +33,7 @@ export default class IdeaBoard extends Component {
     const ideasList = this.state.ideas.map((idea, i) => {
       return (
         <StyledIdea key={i}>
+        <div>tested</div>
           <div>{idea.title}</div>
           <div>{idea.description}</div>
         </StyledIdea>
