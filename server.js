@@ -39,5 +39,7 @@ const usersController = require('./routes/usersController')
 const ideasController = require('./routes/ideasController')
 
 app.use('/api/users', usersController)
-app.use('/api/ideas', ideasController)
+app.use('/api/users/:userId/ideas', ideasController)
+
+
 module.exports = app
