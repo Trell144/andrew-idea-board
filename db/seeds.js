@@ -23,7 +23,7 @@ const elon = new User({
   ideas: [mars, tesla],
 })
 
-User.remove({})
+User.deleteMany()
   .then(() => elon.save())
   .then(() => console.log('Successful Save'))
   .then(() => mongoose.connection.close())
