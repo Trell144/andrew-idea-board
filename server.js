@@ -36,7 +36,8 @@ app.get('/', (req, res) => {
 })
 
 const usersController = require('./routes/usersController')
+const ideasController = require('./routes/ideasController')
 
 app.use('/api/users', usersController)
-
+app.use('/api/ideas', ideasController)
 module.exports = app
