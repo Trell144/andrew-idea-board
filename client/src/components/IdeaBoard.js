@@ -95,7 +95,7 @@ export default class IdeaBoard extends Component {
     //put it back
     this.setState({ ideas })
   }
-//Not sure how the async woks in this line of code
+//Not sure how the async works in this line of code
   updateIdea = async (i) => {
     const userId = this.props.match.params.userId
     const updatedIdea = this.state.ideas[i]

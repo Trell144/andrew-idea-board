@@ -37,6 +37,7 @@ router.delete('/:id', (req, res) => {
 //     })
 // })
 
+//I dont understand the conditionals here or why they are used.
 router.put('/:id', (req, res) => {
   User.findById(req.params.userId)
     .then(user => {
