@@ -1,3 +1,4 @@
+//import react and the links wrriten in react router
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 

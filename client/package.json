@@ -1,3 +1,6 @@
+//Not sure what dependencies I need to change or make sure are here before starting project.
+//I undertsand to check for my scripts
+
 {
   "name": "client",
   "proxy": "http://localhost:3001",

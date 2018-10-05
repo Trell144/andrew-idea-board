@@ -1,7 +1,16 @@
+
+// ?WHY ARE WE PUTTING COOMPONENT IN CURLY BOYS HERE? I uderstand that we are are 
+// importing react from node. ?Is this saying apply react to every component?
+
+
+//react, axios, and styled components are all being imported from node and the npm install completed
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+//?What specifially caused this app to be responsive? Is it the flex properties?
 
+// CSS styling is being declared here through functions and 
+// styled divs and being called to return render on lines 98-129
 const StyledPageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -46,7 +55,7 @@ const StyledIdea = styled.div`
   padding-top: 0px;
   margin: 20px;
 `
-
+//?HOW IS STATE ABLE TO BE CALLED THIS FAR DOWN? I THOUGHT STATE HAD TO BE DECLARED AT THE TOP.
 export default class IdeaBoard extends Component {
   state = {
     user: {},
@@ -86,13 +95,13 @@ export default class IdeaBoard extends Component {
     //put it back
     this.setState({ ideas })
   }
-
+//Not sure how the async woks in this line of code
   updateIdea = async (i) => {
     const userId = this.props.match.params.userId
     const updatedIdea = this.state.ideas[i]
     await axios.put(`/api/users/${userId}/ideas/${updatedIdea._id}`, updatedIdea)
   }
-
+//?I think this also renders css?
   render() {
     const ideasList = this.state.ideas.map((idea, i) => {
       return (
@@ -109,7 +118,7 @@ export default class IdeaBoard extends Component {
         </StyledIdea>
       )
     })
-
+//this is the retun for the css functions written above on lines 14-56
     return (
       <StyledPageWrapper>
         <h1>Idea Board for {this.state.user.userName}</h1>
